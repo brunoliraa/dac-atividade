@@ -1,0 +1,13 @@
+----------------------------------------------------------------
+Mon Mar 16 21:46:22 BRT 2020:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.14.2.0 - (1828579): instance a816c00e-0170-e5f4-abfd-000006a7dab0 
+on database directory /home/bruno/Downloads/atividade-dac/dac with class loader sun.misc.Launcher$AppClassLoader@75b84c92 
+Loaded from file:/home/bruno/.gradle/caches/modules-2/files-2.1/org.apache.derby/derby/10.14.2.0/7efad40ef52fbb1f08142f07a83b42d29e47d8ce/derby-10.14.2.0.jar
+java.vendor=Private Build
+java.runtime.version=1.8.0_242-8u242-b08-0ubuntu3~18.04-b08
+user.dir=/home/bruno/Downloads/atividade-dac
+os.name=Linux
+os.arch=amd64
+os.version=5.3.0-40-generic
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''
