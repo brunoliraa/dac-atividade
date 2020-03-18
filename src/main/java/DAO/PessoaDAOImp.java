@@ -21,7 +21,7 @@ public class PessoaDAOImp  implements PessoaDAO{
 
 
     @Override
-    public void save(Pessoa pessoa) throws Exception {
+    public boolean save(Pessoa pessoa) throws Exception {
         try{
             conexao.getConnection();
             String sql = "INSERT INTO PESSOA(id, nome, idade, altura, dataNascimento) VALUES(?,?,?,?,?)";
@@ -33,12 +33,14 @@ public class PessoaDAOImp  implements PessoaDAO{
             preparedStatement.setDate(5,java.sql.Date.valueOf(pessoa.getDataNascimento()));
             preparedStatement.execute();
             preparedStatement.close();
+            return true;
 
         }catch (Exception ex){
             System.out.println(ex.getMessage());
         }finally {
             this.conexao.FecharConexao();
         }
+        return false;
     }
 
     @Override
@@ -74,11 +76,37 @@ public class PessoaDAOImp  implements PessoaDAO{
 
     @Override
     public boolean delete(long id) throws Exception {
+        try {
+            this.conexao.getConnection();
+            String sql = "DELETE FROM PESSOA WHERE ID=?";
+            PreparedStatement preparedStatement = this.conexao.getConnection().prepareStatement(sql);
+            preparedStatement.setLong(1, id);
+            preparedStatement.execute();
+            this.conexao.FecharConexao();
+
+            return true;
+        }catch (Exception ex){
+            System.out.println(ex.getMessage());
+        }
         return false;
     }
 
     @Override
-    public void update(Pessoa pessoa) throws Exception {
-
+    public boolean update(Pessoa pessoa) throws Exception {
+       try {
+           this.conexao.getConnection();
+           String sql = "UPDATE PESSOA SET NOME=? ,IDADE=? , ALTURA=? WHERE ID=?";
+           PreparedStatement preparedStatement = this.conexao.getConnection().prepareStatement(sql);
+           preparedStatement.setString(1, pessoa.getNome());
+           preparedStatement.setInt(2, pessoa.getIdade());
+           preparedStatement.setDouble(3, pessoa.getAltura());
+           preparedStatement.setLong(4, pessoa.getId());
+           preparedStatement.executeUpdate();
+           this.conexao.FecharConexao();
+           return true;
+       }catch (Exception ex){
+           System.out.println(ex.getMessage());
+       }
+       return false;
     }
 }

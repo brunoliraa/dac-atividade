@@ -13,12 +13,12 @@ public class App {
 //        }catch (Exception ex){
 //            System.out.println(ex.getMessage());
 //        }
-        Pessoa pessoa = new Pessoa();
-        pessoa.setDataNascimento(LocalDate.now());
-        pessoa.setId(2);
-        pessoa.setNome("joao");
-        pessoa.setIdade(20);
-        pessoa.setAltura(2);
+//        Pessoa pessoa = new Pessoa();
+//        pessoa.setDataNascimento(LocalDate.now());
+//        pessoa.setId(2);
+//        pessoa.setNome("joao");
+//        pessoa.setIdade(20);
+//        pessoa.setAltura(2);
         //conexao.createTable();
 
         PessoaDAO pessoaDAO = new PessoaDAOImp();
@@ -32,5 +32,6 @@ public class App {
         }catch (Exception ex){
             System.out.println(ex.getMessage());
         }
+
     }
 }

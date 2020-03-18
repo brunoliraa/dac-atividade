@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="PessoaTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-03-18T01:11:05" hostname="bruno-Aspire-F5-573G" time="1.05">
+  <properties/>
+  <testcase name="update" classname="PessoaTest" time="1.05"/>
+  <system-out><![CDATA[works
+works
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

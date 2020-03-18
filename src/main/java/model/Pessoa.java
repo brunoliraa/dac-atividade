@@ -9,6 +9,17 @@ public class Pessoa {
     private double altura;
     private LocalDate dataNascimento;
 
+    public Pessoa(){
+
+    }
+    public Pessoa(long id, String nome, int idade, double altura, LocalDate dataNascimento){
+        this.id=id;
+        this.nome= nome;
+        this.idade=idade;
+        this.altura=altura;
+        this.dataNascimento=dataNascimento;
+    }
+
     public String getNome() {
         return nome;
     }
